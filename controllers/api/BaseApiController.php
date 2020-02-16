@@ -46,6 +46,7 @@ abstract class BaseApiController extends Controller
 
     public function __construct($theme = null)
     {
+        header("Access-Control-Allow-Origin: *"); // Fix the CORS issue for all apis routes.
         $this->initializeQueryBuilder();
 
         parent::__construct($theme);
